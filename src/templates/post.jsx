@@ -7,6 +7,7 @@ import { RichText } from "prismic-reactjs";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import Layout from "components/Layout";
+import {DiscussionEmbed} from 'disqus-react';
 
 const PostHeroContainer = styled("div")`
     max-height: 500px;
@@ -159,6 +160,17 @@ const Post = ({ post, meta }) => {
                 <PostBody>
                     {RichText.render(post.post_body)}
                 </PostBody>
+                <DiscussionEmbed
+                     shortname='amolportfolioblog'
+                    config={
+                      {
+                              url: 'wonderful-lewin-6295dc.netlify.app',
+                              identifier: post.post_title + post.post_date,
+                              title: post.post_title,
+                              language: 'en' //e.g. for Traditional Chinese (Taiwan)	
+                     }
+    }
+/>
             </Layout>
         </>
     )
