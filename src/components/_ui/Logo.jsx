@@ -1,25 +1,55 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+const svgVariants ={
+  hidden: {rotate:-5},
+  visible:{
+    rotate:0,
+    transition:{duration:1}
+  }
+}
+const pathvariants={
+  hidden:{
+    opacity:0,
+    pathLength:0
+  },
+  visible:{
+    opacity:1,
+    pathLength:1,
+    transition:{
+     
+      duration:1,
+      ease:"anticipate"
+    }
+  }
+}
 const Logo = () => (
-    <svg
+    <motion.svg
+    whileHover={{  }}
+    variants={svgVariants}
+    initial="hidden"
+    animate="visible"
     xmlns="http://www.w3.org/2000/svg"
-    width="51.2"
-    height="51.2"
-    viewBox="0 0 512 512"
+    width="56"
+    height="56"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 256 256"
   >
-    <path
-      fill="#00a66c"
-      d="M333.075 10.239l160.503 482a14.985 14.985 0 01-2.051 13.521 14.974 14.974 0 01-12.173 6.24h-83.101c-32.505 0-61.143-20.669-71.25-51.416L241.625 210.74a14.829 14.829 0 010-9.492l63.003-190.994z"
-    ></path>
-    <path
-      fill="#4086f4"
-      d="M115.751 512H32.65a15.018 15.018 0 01-12.173-6.226 15.031 15.031 0 01-2.065-13.521l159.902-482A15.016 15.016 0 01192.552 0h126.299c4.819 0 9.346 2.314 12.173 6.226a14.991 14.991 0 012.051 13.521L186.986 460.628C176.879 491.346 148.241 512 115.751 512z"
-    ></path>
-    <path
-      fill="#4175df"
-      d="M318.851 0h-62.939v253.56l77.162-233.813a14.992 14.992 0 00-2.051-13.521A15.013 15.013 0 00318.851 0z"
-    ></path>
-  </svg>
+    <motion.path
+      variants={pathvariants}
+      fill="#00A66C"
+      d="M166.54 5.121l80.25 241a7.475 7.475 0 01-1.028 6.758 7.48 7.48 0 01-6.086 3.121h-41.551c-16.25 0-30.57-10.336-35.625-25.707l-41.688-124.922a7.421 7.421 0 010-4.746l31.5-95.496zm0 0"
+     ></motion.path>
+    <motion.path
+      variants={pathvariants}
+      fill="#4086F4"
+      d="M57.875 256h-41.55a7.505 7.505 0 01-6.087-3.113 7.52 7.52 0 01-1.031-6.762l79.95-241A7.514 7.514 0 0196.276 0h63.149a7.505 7.505 0 016.086 3.113 7.51 7.51 0 011.027 6.762L93.492 230.313C88.442 245.672 74.122 256 57.875 256zm0 0"
+     ></motion.path>
+    <motion.path
+      variants={pathvariants}
+      fill="#4175DF"
+          d="M159.426 0h-31.469v126.781L166.535 9.875a7.497 7.497 0 00-1.023-6.762A7.505 7.505 0 00159.426 0zm0 0"
+        ></motion.path>
+  </motion.svg>
 );
 
 export default Logo;

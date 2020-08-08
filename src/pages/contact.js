@@ -6,6 +6,8 @@ import styled from "@emotion/styled";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
 
+
+import '../styles/contact.scss';
 const WorkTitle = styled("h1")`
     margin-bottom: 1em;
 `
