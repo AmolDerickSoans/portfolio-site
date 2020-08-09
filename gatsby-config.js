@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Amol Soans | gatsby based protfolio and PWA`,
-        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
+        description: `My Portfolio page powerd by react(gatsby) and prismic CMS.`,
     author: `Marguerite Roth | marguerite.io`,
   },
   plugins: [
